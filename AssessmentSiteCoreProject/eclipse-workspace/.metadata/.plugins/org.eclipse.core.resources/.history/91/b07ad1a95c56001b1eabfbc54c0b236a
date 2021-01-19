@@ -1,0 +1,77 @@
+package pageObjects;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+public class ExpediaPage {
+	
+public WebDriver l2driver;
+	
+	public ExpediaPage (WebDriver r2driver) {
+		l2driver = r2driver;
+		PageFactory.initElements(r2driver, this);
+		
+	}
+	
+	
+	@FindBy(linkText="Flights")
+	@CacheLookup
+	WebElement linkTextFlight;
+	
+	
+	
+		/*
+		 * @FindBy(xpath=".//div[@id='class=\"uitk-field']" +
+		 * "input[@id='location-field-leg1-origin']")
+		 * 
+		 * @CacheLookup WebElement enableDepInputField;
+		 */
+	
+	
+	  //@FindBy(className="uitk-faux-input")
+	  
+	  //@CacheLookup WebElement enableDestInputField;
+	  
+	
+	 
+	 
+	  
+	  @FindBy(css="//input#location-field-leg1-origin.uitk-field-input.has-input-cta.uitk-typeahead-input")
+	  
+	  @CacheLookup 
+	  WebElement depPoint;
+	  
+	  @FindBy(xpath="//div[@id='location-field-leg1-origin-menu']"
+		  		+ "/div/button[@class='uitk-faux-input']")
+		  
+		  @CacheLookup 
+		  WebElement btnDepField;
+	  
+	  @FindBy(xpath="//div[@id='location-field-leg1-destination-menu']"
+		  		+ "/div/button[@class='uitk-faux-input']")
+		  
+		  @CacheLookup 
+		  WebElement btnDestField;
+	 
+	
+
+	public void clickOnFlightLink() {
+		linkTextFlight.click();
+	}
+	
+	public void setDepAndDestSearKeys(String dep,String dest) throws InterruptedException {
+		
+		btnDepField.click();
+		btnDepField.sendKeys(dep);
+		//btnDepField.sendKeys(Keys.RETURN);
+		Thread.sleep(4000);
+		//btnDestField.clear();
+		//btnDestField.sendKeys(dest);
+		//btnDestField.sendKeys(Keys.RETURN);
+	}
+}

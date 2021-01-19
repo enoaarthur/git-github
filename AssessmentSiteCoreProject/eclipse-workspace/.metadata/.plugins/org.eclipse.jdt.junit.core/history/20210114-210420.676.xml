@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (1)" project="siteCore_Assessment_Project_Scenario_One_And_Two" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="testRunner.TestRun" time="0.386">
+    <testsuite name="SearchFlightsInExpedia" time="0.226">
+      <testcase name="Search A Flight Trip on Expedia" classname="SearchFlightsInExpedia" time="0.226"/>
+    </testsuite>
+    <testsuite name="GoogleSearch" time="0.16">
+      <testcase name="Successful Search of a city on Google #1" classname="GoogleSearch" time="0.037"/>
+      <testcase name="Successful Search of a city on Google #2" classname="GoogleSearch" time="0.122"/>
+    </testsuite>
+  </testsuite>
+</testrun>

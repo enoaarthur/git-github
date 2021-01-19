@@ -1,0 +1,49 @@
+{
+	"id": "42e7d72c-2fbc-41ab-99ef-bd2267590c82",
+	"name": "WeatherCollection",
+	"timestamp": "2021-01-15T22:53:06.952Z",
+	"collection_id": "b3368632-b619-463b-b075-a12698a9c4ff",
+	"folder_id": "00f32b0a-c52d-442b-a625-2d42796aa990",
+	"environment_id": "0",
+	"totalPass": 1,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7161c038-135f-42a6-9cad-95f48eaeddeb",
+			"name": "GET2NYWeatherOfTomorrow",
+			"url": "http://api.openweathermap.org/data/2.5/forecast?q=new%20york&appid=5e083f38cf3b2794bbf3be44658e8afa&units=metric",
+			"time": 128,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"The temperature is less than or equal to 10°C": true
+			},
+			"testPassFailCounts": {
+				"The temperature is less than or equal to 10°C": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				128
+			],
+			"allTests": [
+				{
+					"The temperature is less than or equal to 10°C": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 128,
+	"collection": {
+		"requests": [
+			{
+				"id": "7161c038-135f-42a6-9cad-95f48eaeddeb",
+				"method": "GET"
+			}
+		]
+	}
+}

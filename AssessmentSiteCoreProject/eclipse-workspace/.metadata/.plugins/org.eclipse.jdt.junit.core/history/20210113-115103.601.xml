@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (1)" project="siteCore_Assessment_Project_Scenario_One_And_Two" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRun" time="35.886">
+    <testsuite name="GoogleSearch" time="35.886">
+      <testcase name="Successful Search of a city on Google" classname="GoogleSearch" time="35.886">
+        <error>org.openqa.selenium.NoSuchFrameException: No frame element found by name or id iframe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PC31168', ip: '192.168.0.6', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_251'
+Driver info: driver.version: unknown&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)&#13;
+	at stepDefinitions.Steps.user_opens_url(Steps.java:30)&#13;
+	at ✽.User opens URL "http://www.google.com"(file:///C:/Users/TEMP.DOMAIN01/eclipse-workspace/siteCore_Assessment_Project_Scenario_One_And_Two/src/test/java/Features/searchCityOnGoogle.feature:6)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

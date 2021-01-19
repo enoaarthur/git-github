@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (1)" project="siteCore_Assessment_Project_Scenario_One_And_Two" tests="3" started="3" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRun" time="0.509">
+    <testsuite name="SearchFlightsInExpedia" time="0.338">
+      <testcase name="Search A Flight Trip on Expedia" classname="SearchFlightsInExpedia" time="0.338">
+        <error>io.cucumber.junit.UndefinedStepException: The step "Add "one" child for the flight" is undefined. You can implement it using the snippet(s) below:
+
+@When("Add {string} child for the flight")
+public void add_child_for_the_flight(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="GoogleSearch" time="0.168">
+      <testcase name="Successful Search of a city on Google #1" classname="GoogleSearch" time="0.015"/>
+      <testcase name="Successful Search of a city on Google #2" classname="GoogleSearch" time="0.153"/>
+    </testsuite>
+  </testsuite>
+</testrun>

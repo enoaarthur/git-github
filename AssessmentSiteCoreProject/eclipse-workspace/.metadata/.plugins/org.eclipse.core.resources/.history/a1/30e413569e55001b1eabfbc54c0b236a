@@ -1,0 +1,8 @@
+Feature: Login
+
+Scenario: Successful Login with Valid Credentials
+
+	Given User Launch Chrome browser
+	When User opens URL "https://admin-demo.nopcommerce.com/"
+	And close browser
+	

@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b3368632-b619-463b-b075-a12698a9c4ff",
+		"name": "WeatherCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET2NYWeatherOfTomorrow",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"//The response is received in Json format\r",
+									"var data = JSON.parse(responseBody); \r",
+									"\r",
+									"/*To fetch the forecast of tomorrow\r",
+									"we need to get the current date and\r",
+									"add 1 day. That's what we are doing\r",
+									"here below\r",
+									"\r",
+									"*/\r",
+									"let current_date = Date.now();\r",
+									"tomorrow =current_date+86400000 \r",
+									"\r",
+									"/*Here we convert the date of tomorrow to string \r",
+									"This will help us to use the string functions like \r",
+									"substring(), localeCompare(),...\r",
+									"We only need to compare the first 11 char. of the\r",
+									"String (yyyy-mm-dd)\r",
+									"*/\r",
+									"var tomorrowDateToString = new Date(tomorrow).toISOString().toString().substring(0,10);\r",
+									"\r",
+									"/*\r",
+									"In response we get the forecast for the next 5 days\r",
+									"So we receive the a list of 5 days with 3 hours forecast \r",
+									"But we only need the next day weather \r",
+									"here below, we loop the list to get the weather of \r",
+									"next day\r",
+									"*/\r",
+									"\r",
+									"//We initialize the boolean find to false logically since the 1st element of the list is today Date\r",
+									"var find = (data.list[0].dt_txt.substring(0,10).localeCompare(tomorrowDateToString)==0);\r",
+									"\r",
+									"// This variable id global since we need to its value after the for scope, to know which element of the list matches\r",
+									"var i = 0;\r",
+									"for(i= 0;i<data.list.length && !find;++i)\r",
+									"    find= (data.list[i].dt_txt.substring(0,10).localeCompare(tomorrowDateToString)==0);\r",
+									"\r",
+									"/*\r",
+									"We expect the weather max_temperatue to be below 10\r",
+									"else the test failed\r",
+									"*/\r",
+									"\r",
+									"pm.test(\"The temperature is less than or equal to 10°C\",function()\r",
+									"{pm.expect(data.list[i].main.temp_max).to.be.below(10)});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?q=new%20york&appid=5e083f38cf3b2794bbf3be44658e8afa&units=metric",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "new%20york"
+								},
+								{
+									"key": "appid",
+									"value": "5e083f38cf3b2794bbf3be44658e8afa"
+								},
+								{
+									"key": "units",
+									"value": "metric"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var moment = require('moment')",
+					"",
+					"    pm.environment.set(\"current_timestamp\", moment().toISOString())",
+					"    pm.environment.set(\"current_timestamp + 1 day\", moment().add(1, 'day').toISOString())"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var moment = require('moment')",
+					"",
+					"    pm.environment.set(\"current_timestamp\", moment().toISOString())",
+					"    pm.environment.set(\"tomorrow\", moment().add(1, 'day').toISOString())"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "api.openweathermap.org/data/2.5/weather"
+		},
+		{
+			"key": "tomorrow",
+			"value": ""
+		}
+	]
+}

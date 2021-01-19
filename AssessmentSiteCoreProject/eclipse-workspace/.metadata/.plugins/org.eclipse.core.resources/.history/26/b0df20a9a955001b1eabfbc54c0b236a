@@ -1,0 +1,9 @@
+Feature: SearchFlightsInExpedia
+
+Scenario: Search A Flight Trip on Expedia
+
+	Given User Launch A New Chrome browser
+	When User navigate to URL "https://www.expedia.com/"
+	And click on Link Text "Flights"
+	And close the new browser
+	

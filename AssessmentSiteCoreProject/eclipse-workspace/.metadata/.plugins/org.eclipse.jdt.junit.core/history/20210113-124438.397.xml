@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (1)" project="siteCore_Assessment_Project_Scenario_One_And_Two" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="testRunner.TestRun" time="4.289">
+    <testsuite name="GoogleSearch" time="4.289">
+      <testcase name="Successful Search of a city on Google" classname="GoogleSearch" time="4.29">
+        <error>java.lang.NullPointerException&#13;
+	at stepDefinitions.Steps.user_opens_url(Steps.java:33)&#13;
+	at ✽.User opens URL "https://www.google.com"(file:///C:/Users/TEMP.DOMAIN01/eclipse-workspace/siteCore_Assessment_Project_Scenario_One_And_Two/src/test/java/Features/searchCityOnGoogle.feature:6)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,8 @@
+Feature: Login
+
+Scenario: Successful Login with Valid Credentials
+
+	Given User Launch Chrome browser
+	When User navigate to URL "https://www.expedia.com/"
+	And close browser
+	

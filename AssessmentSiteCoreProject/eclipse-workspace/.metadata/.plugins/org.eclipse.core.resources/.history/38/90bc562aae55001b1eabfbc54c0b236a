@@ -1,0 +1,45 @@
+package pageObjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ExpediaPage {
+	
+public WebDriver l2driver;
+	
+	public ExpediaPage (WebDriver r2driver) {
+		l2driver = r2driver;
+		PageFactory.initElements(r2driver, this);
+		
+	}
+	
+	//"//a[contains(.,'?pwaLob=wizard-flight-pwa')]"
+	
+	@FindBy(linkText="Flights")
+	@CacheLookup
+	WebElement linkTextFlight;
+	
+	@FindBy(id="location-field-leg1-origin")
+	@CacheLookup
+	WebElement depPoint;
+	
+	@FindBy(id="location-field-leg1-destination")
+	@CacheLookup
+	WebElement destPoint;
+	
+
+	public void clickOnFlightLink() {
+		linkTextFlight.click();
+	}
+	
+	public void setDepAndDestSearKeys(String dep,String dest) {
+		depPoint.clear();
+		depPoint.sendKeys(dep);
+		destPoint.clear();
+		destPoint.sendKeys(dest);
+		
+	}
+}

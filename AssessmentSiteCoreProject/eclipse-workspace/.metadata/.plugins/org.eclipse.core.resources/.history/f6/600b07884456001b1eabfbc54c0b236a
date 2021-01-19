@@ -1,0 +1,72 @@
+package pageObjects;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ExpediaPage {
+	
+public WebDriver l2driver;
+	
+	public ExpediaPage (WebDriver r2driver) {
+		l2driver = r2driver;
+		PageFactory.initElements(r2driver, this);
+		
+	}
+	
+	//"//a[contains(.,'?pwaLob=wizard-flight-pwa')]"
+	
+	@FindBy(linkText="Flights")
+	@CacheLookup
+	WebElement linkTextFlight;
+	
+	
+	//search = WebDriverWait(browser, 20).until(EC.element_to_be_clickable
+			//((By.XPATH, "//div[@id='nav-typeahead-wormhole']//input[@placeholder='Recherche']")))
+	
+	/*
+	 * @FindBy(xpath=".//div[@id='class=\"uitk-field']" +
+	 * "input[@id='location-field-leg1-origin']")
+	 * 
+	 * @CacheLookup WebElement enableDepInputField;
+	 */
+	
+	/*
+	 * @FindBy(className="uitk-faux-input")
+	 * 
+	 * @CacheLookup WebElement enableDestInputField;
+	 * 
+	 * 
+	 * @FindBy(id="location-field-leg1-origin")
+	 * 
+	 * @CacheLookup WebElement depPoint;
+	 * 
+	 * @FindBy(id="location-field-leg1-destination")
+	 * 
+	 * @CacheLookup WebElement destPoint;
+	 */
+	
+
+	public void clickOnFlightLink() {
+		linkTextFlight.click();
+	}
+	
+	public void setDepAndDestSearKeys(String dep,String dest) {
+		
+		
+		//enableDepInputField.click();
+		WebElement depPoint = WebDriverWait(browser, 20).until(EC.element_to_be_clickable
+				((By.XPATH, "//div[@id='nav-typeahead-wormhole']//input[@placeholder='Recherche']")));
+		depPoint.clear();
+		depPoint.sendKeys(dep);
+	    depPoint.sendKeys(Keys.ENTER);
+		//enableDestInputField.click();
+		//destPoint.clear();
+		//destPoint.sendKeys(dest);
+		//destPoint.sendKeys(Keys.ENTER);
+		
+	}
+}

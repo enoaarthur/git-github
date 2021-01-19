@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (2)" project="siteCoreProject_Assessment_Scenario2" tests="3" started="3" failures="0" errors="3" ignored="0">
+  <testsuite name="testRunner.TestRun" time="0.275">
+    <testsuite name="SearchFlightsInExpedia" time="0.23">
+      <testcase name="Search A Flight Trip on Expedia" classname="SearchFlightsInExpedia" time="0.23">
+        <error>io.cucumber.junit.UndefinedStepException: The step "User Launch A New Chrome browser" is undefined. You can implement it using the snippet(s) below:
+
+@Given("User Launch A New Chrome browser")
+public void user_launch_a_new_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("User navigate to URL {string}")
+public void user_navigate_to_url(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("click on Link Text {string}")
+public void click_on_link_text(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Enter a valid departure as {string} And valid destination as {string}")
+public void enter_a_valid_departure_as_and_valid_destination_as(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Add a child of {int} Years old for the flight")
+public void add_a_child_of_years_old_for_the_flight(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("select date in the calendar in {int} months")
+public void select_date_in_the_calendar_in_months(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("click on search Button")
+public void click_on_search_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("The page title should be {string}")
+public void the_page_title_should_be(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("close the new browser")
+public void close_the_new_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="GoogleSearch" time="0.042">
+      <testcase name="Successful Search of a city on Google #1" classname="GoogleSearch" time="0.028">
+        <error>io.cucumber.junit.UndefinedStepException: The step "User Launch Chrome browser" is undefined. You can implement it using the snippet(s) below:
+
+@Given("User Launch Chrome browser")
+public void user_launch_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("User opens URL {string}")
+public void user_opens_url(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Page Title should be {string}")
+public void page_title_should_be(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter city Name as {string}")
+public void user_enter_city_name_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("press the Key Enter")
+public void press_the_key_enter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("close browser")
+public void close_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Successful Search of a city on Google #2" classname="GoogleSearch" time="0.013">
+        <error>io.cucumber.junit.UndefinedStepException: The step "User Launch Chrome browser" is undefined. You can implement it using the snippet(s) below:
+
+@Given("User Launch Chrome browser")
+public void user_launch_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("User opens URL {string}")
+public void user_opens_url(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Page Title should be {string}")
+public void page_title_should_be(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User enter city Name as {string}")
+public void user_enter_city_name_as(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("press the Key Enter")
+public void press_the_key_enter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("close browser")
+public void close_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

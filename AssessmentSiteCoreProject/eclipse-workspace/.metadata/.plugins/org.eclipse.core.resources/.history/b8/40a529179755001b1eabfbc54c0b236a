@@ -1,0 +1,93 @@
+package stepDefinitions;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.cucumber.java.en.*;
+import pageObjects.SearchPage;
+
+public class Steps {
+	
+	public WebDriver driver;
+	public SearchPage lp;
+	
+	@Given("User Launch Chrome browser")
+	public void user_launch_chrome_browser() {
+		
+		System.setProperty("webdriver.chromer.driver", 
+				"C:\\Users\\TEMP.DOMAIN01\\eclipse-workspace\\new_nopCommerce004_Cucumber"
+						+ "\\src\\test\\java\\Drivers\\chromedriver");
+		//driver = new ChromeDriver();
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--lang=en-us"); Map<String, Object> prefs = new
+		 * HashMap<String, Object>();
+		 * 
+		 * prefs.put("intl.accept_languages", "en-us,en");
+		 * 
+		 * options.setExperimentalOption("prefs", prefs); driver = new
+		 * ChromeDriver(options);
+		 */
+	   lp = new SearchPage(driver);
+	}
+
+	@When("User opens URL {string}")
+	public void user_opens_url(String url) throws InterruptedException {
+		driver.get(url);
+		Thread.sleep(3000);
+		driver.manage().window().maximize();
+		
+		driver.switchTo().frame(0);
+		WebElement agree = driver.findElement(By.id("introAgreeButton"));
+		agree.click();
+		//driver.switchTo().frame(0);
+		//driver.findElement(By.id("introAgreeButton")).click();
+		//driver.switchTo().frame("iframe");
+		//Thread.sleep(3000);
+		//("iframe" for this specific example, otherwise put id of the iframe there)
+
+		//driver.findElement(By.xpath("//*[@id='introAgreeButton']/span/span")).click();
+		Thread.sleep(4000);
+		
+		//driver.switchTo().defaultContent();
+		//lp.pressAgreeButton();
+	   
+	}
+
+	@Then("Page Title should be {string}")
+	public void page_title_should_be(String title) {
+		if(driver.getPageSource().contains("Google is unaccessible.")) {
+			driver.close();
+			Assert.assertTrue(false);
+		}
+		else {
+			Assert.assertEquals(title.substring(1, 8), driver.getTitle().substring(1, 8));
+		}
+	    
+	}
+
+	@Then("User enter city Name as {string}")
+	public void user_enter_city_name_as(String cityName) {
+		lp.setSearchFieldName(cityName);
+	    
+	}
+
+	@Then("press the Key Enter")
+	public void press_the_key_enter() throws InterruptedException {
+	    lp.pressEnterKey();
+	    Thread.sleep(3000);
+	}
+
+	@Then("close browser")
+	public void close_browser() {
+		driver.close();
+	}
+
+}

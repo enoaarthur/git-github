@@ -1,0 +1,37 @@
+package stepDefinitions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import io.cucumber.java.en.*;
+import pageObjects.SearchPage;
+
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Steps_Expedia {
+	public WebDriver driver;
+	public SearchPage lp;
+	
+	@Given("User Launch A New Chrome browser")
+	public void user_launch_a_new_chrome_browser() {
+		System.setProperty("webdriver.chromer.driver", 
+				"C:\\Users\\TEMP.DOMAIN01\\eclipse-workspace\\new_nopCommerce004_Cucumber"
+						+ "\\src\\test\\java\\Drivers\\chromedriver");
+		driver = new ChromeDriver();
+	   lp = new SearchPage(driver);
+	}
+
+	
+	@When("User navigate to URL {string}")
+	public void user_navigate_to_url(String url) throws InterruptedException {
+		System.out.println("New Expedia Features");
+		
+		driver.get(url);
+		Thread.sleep(3000);
+		driver.manage().window().maximize();
+	}
+
+}
