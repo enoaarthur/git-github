@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (2)" project="siteCoreProject_Assessment_Scenario2" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="testRunner.TestRun" time="43.374">
-    <testsuite name="SearchFlightsInExpedia" time="43.374">
-      <testcase name="Search A Flight Trip on Expedia" classname="SearchFlightsInExpedia" time="43.374"/>
-    </testsuite>
-  </testsuite>
-</testrun>

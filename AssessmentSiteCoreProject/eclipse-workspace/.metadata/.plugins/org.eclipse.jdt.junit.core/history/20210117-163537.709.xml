@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRun (3)" project="siteCore_Assessment_Project_ScenarioOne" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="testRunner.TestRun" time="42.834">
-    <testsuite name="GoogleSearch" time="42.834">
-      <testcase name="Successful Search of a city on Google #1" classname="GoogleSearch" time="21.707"/>
-      <testcase name="Successful Search of a city on Google #2" classname="GoogleSearch" time="21.128"/>
-    </testsuite>
-  </testsuite>
-</testrun>

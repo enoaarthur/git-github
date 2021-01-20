@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 2 elements to &apos;siteCoreProject_Assessment_Scenario2/src.test.resources&apos;&#x0D;&#x0A;- Original project: &apos;siteCore_Assessment_Project_ScenarioOne&apos;&#x0D;&#x0A;- Destination element: &apos;siteCoreProject_Assessment_Scenario2/src.test.resources&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     cucumber.properties&#x0D;&#x0A;     junit-platform.properties" description="Copy files" destination="=siteCoreProject_Assessment_Scenario2/src.test.resources" element1="src/test/resources/cucumber.properties" element2="src/test/resources/junit-platform.properties" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1610958975335" units="0" version="1.0"/>
-</session>
