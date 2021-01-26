@@ -1,4 +1,8 @@
 hello!
 
 
+<<<<<<< .merge_file_a09920
 This filed was modified in branch B
+=======
+This file was updated on branch C too 
+>>>>>>> .merge_file_a08440
